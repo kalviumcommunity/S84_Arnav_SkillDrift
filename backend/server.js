@@ -1,0 +1,23 @@
+const express=require('express')
+const connectToDb=require('./Config/db')
+
+require('dotenv').config();
+
+const app=express();
+app.use(express.json());
+
+const port = process.env.PORT || 3000;
+const db_url = process.env.DB_URI;
+
+app.get('/',(req,res)=>{
+    res.json('This is the Home route')
+})
+
+app.listen(port, async ()=>{
+    try{
+        await connectToDb(db_url)
+        console.log(`Server is running on http://localhost:${port}`)
+    }catch(err){
+        console.log('Failed to connect to the server',err)
+    }
+})
