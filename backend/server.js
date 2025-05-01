@@ -6,8 +6,14 @@ require('dotenv').config();
 const app=express();
 app.use(express.json());
 
+const userRoutes=require('./Routes/UserRoutes')
+const skillRoutes=require('./Routes/SkillRoutes'); 
+
 const port = process.env.PORT || 3000;
 const db_url = process.env.DB_URI;
+
+app.use('/users',userRoutes)
+app.use('/skills',skillRoutes)
 
 app.get('/',(req,res)=>{
     res.json('This is the Home route')
