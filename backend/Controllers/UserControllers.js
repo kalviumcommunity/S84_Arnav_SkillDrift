@@ -55,4 +55,26 @@ const getUserById = async (req, res) => {
   }
 };
 
-module.exports = { createUser , getAllUsers , getUserById };
+// update user by ID
+const updateUser = async (req, res) => {
+  try {
+    const userId = req.params.id;
+    const updateData = req.body;
+
+    const updatedUser = await User.findByIdAndUpdate(userId, updateData, {
+      new: true, // return the updated document
+      runValidators: true,
+    });
+
+    if (!updatedUser) {
+      return res.status(404).json({ error: 'User not found' });
+    }
+
+    res.status(200).json(updatedUser);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
+  }
+};
+
+module.exports = { createUser, getAllUsers, getUserById, updateUser };
+
