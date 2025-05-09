@@ -1,9 +1,10 @@
 import React from 'react';
-import Register from './components/Register';
+import UserManager from './components/UserManager';
+
 function App() {
   return (
     <div>
-      <Register />
+      <UserManager />
     </div>
   );
 }
