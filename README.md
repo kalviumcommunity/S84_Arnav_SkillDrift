@@ -1,6 +1,6 @@
 ## Render Deployment Link:- https://s84-arnav-skilldrift.onrender.com
 
-## Netlify Deployment Link:- capstonefrontenddeploy.netlify.app
+## Netlify Deployment Link:- https://capstonefrontenddeploy.netlify.app
 
 # 🎓 Capstone Project – SkillDrift: A Peer-to-Peer Skill Exchange Platform
 
