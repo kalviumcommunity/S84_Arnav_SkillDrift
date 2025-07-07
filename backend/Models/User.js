@@ -8,7 +8,8 @@ const UserSchema = new mongoose.Schema({
   email: {
     type: String,
     required: [true, 'Email is required'],
-    unique: true
+    unique: true,
+    match: [ /^\S+@\S+\.\S+$/, 'Please enter a valid email' ]
   },
   password: {
     type: String,
@@ -16,8 +17,8 @@ const UserSchema = new mongoose.Schema({
   },
   age: {
     type: Number,
-    required: [true, 'Age is required'],
-    min: [12, 'Age must be at least 12']
+    min: [12, 'Age must be at least 12'],
+    required: false
   },
   profession: {
     type: String,

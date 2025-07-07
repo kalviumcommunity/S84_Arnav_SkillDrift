@@ -12,9 +12,9 @@
   border: 1px solid #e0e0e0;
   border-radius: 16px;
   padding: 40px;
-  max-width: 400px;
+  max-width: 450px;
   width: 100%;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
@@ -130,7 +130,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 32px;
+  padding: 20px 32px;
   background-color: white;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
   position: sticky;
@@ -182,7 +182,7 @@ nav button:last-child {
 }
 
 .hero h1 {
-  font-size: 2.8rem;
+  font-size: 4.0rem;
   font-weight: 700;
   margin-bottom: 20px;
 }
@@ -275,7 +275,7 @@ nav button:last-child {
 .category-card {
   background-color: white;
   border: 1px solid #e0e0e0;
-  border-radius: 12px;
+  border-radius: 18px;
   padding: 24px;
   text-align: center;
   transition: box-shadow 0.2s ease;
@@ -302,3 +302,65 @@ nav button:last-child {
   margin-top: 4px;
 }
 
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.oauth-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.oauth-btn.google {
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #ddd;
+}
+
+.oauth-btn img {
+  width: 20px;
+  height: 20px;
+}
+
+.divider {
+  text-align: center;
+  margin: 1rem 0;
+  font-weight: bold;
+  color: #aaa;
+}
+
+.password-wrapper {
+  position: relative;
+  width: 100%;
+}
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+.toggle-visibility {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.error-message {
+  color: red;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+.success-message {
+  color: green;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
